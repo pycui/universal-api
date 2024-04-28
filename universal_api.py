@@ -1,6 +1,7 @@
 import logging
 import os
 from openai import OpenAI
+logging.basicConfig(level=logging.INFO)
 
 class UniversalAPI:
     def __init__(self):
@@ -11,7 +12,7 @@ class UniversalAPI:
         if name in self.cached_methods:
             return self.cached_methods[name]
         def method(*args, **kwargs):
-            prompt = f"The user is asking for a method called {name} with arguments {args} and kwargs {kwargs}. Return the python code that implements this method. Only return the python code, without the ```python prefix and ``` sufix."
+            prompt = f"The user is asking for a method called {name} with arguments {args} and kwargs {kwargs}. Return the python code that implements this method. Only return the python code, without the ```python prefix and ``` sufix. Do not include example usage."
             messages = [
                 {"role": "user", "content": prompt},
             ]
@@ -32,3 +33,6 @@ class UniversalAPI:
 # Illustration
 api = UniversalAPI()
 print(api.sort([3, 2, 1])) # returns [1, 2, 3]
+print(api.sort([3, 2, 1], reverse=True)) # returns [3, 2, 1]
+print(api.add(1, 2)) # returns 3
+print(api.reverse('hello')) # returns 'olleh'
