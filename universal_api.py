@@ -1,7 +1,6 @@
 import logging
 import os
 from openai import OpenAI
-logging.basicConfig(level=logging.INFO)
 
 class UniversalAPI:
     def __init__(self):
