@@ -35,3 +35,4 @@ print(api.sort([3, 2, 1])) # returns [1, 2, 3]
 print(api.sort([3, 2, 1], reverse=True)) # returns [3, 2, 1]
 print(api.add(1, 2)) # returns 3
 print(api.reverse('hello')) # returns 'olleh'
+api.fizzbuzz(15) # prints the fizzbuzz sequence up to 15
