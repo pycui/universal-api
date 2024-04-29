@@ -9,10 +9,12 @@ This is a non-serious library that can implement any functions on the fly using 
 ```python
 api = UniversalAPI()
 print(api.sort([3, 2, 1])) # returns [1, 2, 3]
-print(api.sort([3, 2, 1], reverse=True)) # returns [3, 2, 1]
+print(api.sort([4, 3, 2, 1])) # returns [1, 2, 3, 4] using cached implementation
+print(api.sort([1, 2, 3], reverse=True)) # returns [3, 2, 1]
 print(api.add(1, 2)) # returns 3
 print(api.reverse('hello')) # returns 'olleh'
 api.fizzbuzz(15) # prints the fizzbuzz sequence up to 15
+api.print_picachu() # prints an ASCII art of Picachu
 ```
 
 ## Warning
