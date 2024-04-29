@@ -18,7 +18,7 @@ api.print_picachu() # prints an ASCII art of Picachu
 ```
 
 ## Warning
-This library will execute external code in your local machine. It's **NOT** safe to run in production (or really, any serious environment).
+This library will execute unverified code in your local machine. It's **NOT** safe to run in production (or really, any serious environment).
 
 ## Notes
-By default this library uses OpenAI GPT API. You can modify environment variables like `OPENAI_BASE_URL` to use other LLM endpoints (e.g. Anyscale Endpoint), which allows you to run on other models like the LLama series.
+By default this library uses OpenAI GPT API. You can modify environment variables like `OPENAI_BASE_URL` to use other LLM endpoints (e.g. Anyscale Endpoint), which allows you to run on other models like the LLaMa series. It's also possible to use local LLMs.
