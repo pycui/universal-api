@@ -2,12 +2,13 @@
 
 *Don't know how to implement a function? Let Universal API help you on the fly!*
 
-This is a non-serious library that can implement any functions on the fly using LLMs. Generated functions are cached so you don't pay for things that are already implemented.
+This is a non-serious library that can implement any functions on the fly using LLMs. To use it, simply call a function with a descriptive name and parameters, and it will be defined, implemented and called at runtime. Generated functions are cached so you don't pay for things that are already implemented.
 
 ## Usage
 
 ```python
 api = UniversalAPI()
+# Start to call arbitrary functions 
 print(api.sort([3, 2, 1])) # returns [1, 2, 3]
 print(api.sort([4, 3, 2, 1])) # returns [1, 2, 3, 4] using cached implementation
 print(api.sort([1, 2, 3], reverse=True)) # returns [3, 2, 1]
